@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="CsoundGenerator.h" />
+    <ClInclude Include="Generic_UI_for_CsoundSource.h" />
+    <ClInclude Include="Generic_UI_for_CsoundSourceFactory.h" />
+    <ClInclude Include="Generic_UI_for_CsoundSourceParams.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CsoundGenerator.cpp" />
+    <ClCompile Include="Generic_UI_for_CsoundSource.cpp" />
+    <ClCompile Include="Generic_UI_for_CsoundSourceParams.cpp" />
+  </ItemGroup>
+</Project>

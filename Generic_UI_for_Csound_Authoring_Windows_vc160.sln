@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Generic_UI_for_Csound", "WwisePlugin\Generic_UI_for_Csound_Authoring_Windows_vc160.vcxproj", "{C3000657-CBC6-02EA-8871-04A6ED795209}"
+	ProjectSection(ProjectDependencies) = postProject
+		{93D88F98-F2B7-399B-7BE7-D8FCDC6D1173} = {93D88F98-F2B7-399B-7BE7-D8FCDC6D1173}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Generic_UI_for_CsoundSource", "SoundEnginePlugin\Generic_UI_for_Csound_Windows_vc160_static.vcxproj", "{93D88F98-F2B7-399B-7BE7-D8FCDC6D1173}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C3000657-CBC6-02EA-8871-04A6ED795209}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C3000657-CBC6-02EA-8871-04A6ED795209}.Debug|Win32.Build.0 = Debug|Win32
+		{C3000657-CBC6-02EA-8871-04A6ED795209}.Debug|x64.ActiveCfg = Debug|x64
+		{C3000657-CBC6-02EA-8871-04A6ED795209}.Debug|x64.Build.0 = Debug|x64
+		{C3000657-CBC6-02EA-8871-04A6ED795209}.Release|Win32.ActiveCfg = Release|Win32
+		{C3000657-CBC6-02EA-8871-04A6ED795209}.Release|Win32.Build.0 = Release|Win32
+		{C3000657-CBC6-02EA-8871-04A6ED795209}.Release|x64.ActiveCfg = Release|x64
+		{C3000657-CBC6-02EA-8871-04A6ED795209}.Release|x64.Build.0 = Release|x64
+		{93D88F98-F2B7-399B-7BE7-D8FCDC6D1173}.Debug|Win32.ActiveCfg = Debug|Win32
+		{93D88F98-F2B7-399B-7BE7-D8FCDC6D1173}.Debug|Win32.Build.0 = Debug|Win32
+		{93D88F98-F2B7-399B-7BE7-D8FCDC6D1173}.Debug|x64.ActiveCfg = Debug|x64
+		{93D88F98-F2B7-399B-7BE7-D8FCDC6D1173}.Debug|x64.Build.0 = Debug|x64
+		{93D88F98-F2B7-399B-7BE7-D8FCDC6D1173}.Release|Win32.ActiveCfg = Profile|Win32
+		{93D88F98-F2B7-399B-7BE7-D8FCDC6D1173}.Release|Win32.Build.0 = Profile|Win32
+		{93D88F98-F2B7-399B-7BE7-D8FCDC6D1173}.Release|x64.ActiveCfg = Profile|x64
+		{93D88F98-F2B7-399B-7BE7-D8FCDC6D1173}.Release|x64.Build.0 = Profile|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Win32">
+      <UniqueIdentifier>{78C2600E-E4D6-88BF-AD58-2C1F192C85F0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Generic_UI_for_CsoundPlugin.h" />
+    <ClInclude Include="Win32\Generic_UI_for_CsoundPluginGUI.h">
+      <Filter>Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Generic_UI_for_CsoundPlugin.cpp" />
+    <ClCompile Include="Win32\Generic_UI_for_CsoundPluginGUI.cpp">
+      <Filter>Win32</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Generic_UI_for_Csound.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Generic_UI_for_Csound.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Generic_UI_for_Csound.xml" />
+  </ItemGroup>
+</Project>

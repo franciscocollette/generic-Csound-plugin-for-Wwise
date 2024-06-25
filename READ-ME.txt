@@ -1,0 +1,50 @@
+TO INSTALL THE PLUGGIN IN YOUR WWISE: 
+
+1) DOWLOAD THE "PLUGIN BUILT.ZIP" FILE 
+1) OPEN YOUR AUDIOKINETIC LAUNCHER AND GO TO: 
+	PLUG-INS -> ADD FROM ARCHIVE -> SELECT THE "PLUGIN BUILT.ZIP" FILE AND INSTALL IT
+
+IMPORTANT: 
+- THE .CSD FILE NEEDS TO BE INSIDE YOUR WWISE ROOT INSTALLATION DIRECTORY (IF YOU HAVE MULTIPLE VERSIONS INSTALLED TRY DIFFERENT ONES) 
+- THE .CSD FILE NEEDS TO BE NAMED: "CsoundInWwise.csd"
+- IN THE CSOPTIONS YOU HAVE TO TAKE OUT THE REAL TIME AUDIO (-odac)  
+- nchnls OPTION COULD BE 1 OR 2 (I RECOMMEND STEREO TO AVOID PROBLEMS)
+- THE NAME OF THE CONTROL CHANNELS SHOULD BE LIKE THIS: 
+//box 1 channels
+chn_k "FaderA1", 3   // accepts values from 0 to 1
+chn_k "FaderA2", 3	// accepts values from 0 to 1
+chn_k "FaderA3", 3	// accepts values from -1 to 1
+chn_k "FaderA4", 3	// accepts values from 0 to 1
+chn_k "FaderA5", 3   // accepts values from -1 to 1
+chn_k "CheckBox1", 3  // true/false values (1,0)
+chn_k "CheckBox2", 3	 // true/false values (1,0)
+chn_k "ComboBox1", 3	// int values from 0 to 4
+//box 2 channels
+chn_k "FaderB1", 3   // accepts values from 0 to 1
+chn_k "FaderB2", 3	// accepts values from 0 to 1
+chn_k "FaderB3", 3	// accepts values from -1 to 1
+chn_k "FaderB4", 3	// accepts values from 0 to 1
+chn_k "FaderB5", 3   // accepts values from -1 to 1
+chn_k "CheckBox3", 3  // true/false values (1,0)
+chn_k "CheckBox4", 3	 // true/false values (1,0)
+chn_k "ComboBox2", 3	// int values from 0 to 9
+//box 3 channels
+chn_k "FaderC1", 3   // accepts values from 0 to 1
+chn_k "FaderC2", 3	// accepts values from 0 to 1
+chn_k "FaderC3", 3	// accepts values from -1 to 1
+chn_k "FaderC4", 3	// accepts values from 0 to 1
+chn_k "FaderC5", 3   // accepts values from -1 to 1
+chn_k "CheckBox5", 3  // true/false values (1,0)
+chn_k "CheckBox6", 3	 // true/false values (1,0)
+chn_k "ComboBox3", 3	// int values from 0 to 14
+//box 4 channels
+chn_k "FaderD1", 3   // accepts values from 0 to 1
+chn_k "FaderD2", 3	// accepts values from 0 to 1
+chn_k "FaderD3", 3	// accepts values from -1 to 1
+chn_k "FaderD4", 3	// accepts values from 0 to 1
+chn_k "FaderD5", 3   // accepts values from -1 to 1
+chn_k "CheckBox7", 3  // true/false values (1,0)
+chn_k "CheckBox8", 3	 // true/false values (1,0)
+chn_k "ComboBox4", 3	// int values from 0 to 19
+
+-IN THE PROJECT THERE IS A SAMPLE .CSD FILE TO SEE ALL THE FORMATING 

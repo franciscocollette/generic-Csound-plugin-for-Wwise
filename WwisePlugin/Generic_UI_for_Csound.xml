@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+The content of this file includes portions of the AUDIOKINETIC Wwise Technology
+released in source code form as part of the SDK installer package.
+
+Commercial License Usage
+
+Licensees holding valid commercial licenses to the AUDIOKINETIC Wwise Technology
+may use this file in accordance with the end user license agreement provided
+with the software or, alternatively, in accordance with the terms contained in a
+written agreement between you and Audiokinetic Inc.
+
+Apache License Usage
+
+Alternatively, this file may be used under the Apache License, Version 2.0 (the
+"Apache License"); you may not use this file except in compliance with the
+Apache License. You may obtain a copy of the Apache License at
+http://www.apache.org/licenses/LICENSE-2.0.
+
+Unless required by applicable law or agreed to in writing, software distributed
+under the Apache License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
+OR CONDITIONS OF ANY KIND, either express or implied. See the Apache License for
+the specific language governing permissions and limitations under the License.
+
+  Copyright (c) 2023 Audiokinetic Inc.
+-->
+<!--
+See https://www.audiokinetic.com/library/edge/?source=SDK&id=plugin__xml.html
+for the documentation about the plugin xml format
+-->
+<PluginModule>
+  <SourcePlugin Name="Generic UI Csound" CompanyID="64" PluginID="1661">
+    <PluginInfo>
+      <PlatformSupport>
+        <Platform Name="Any"></Platform>
+      </PlatformSupport>
+    </PluginInfo>
+    <Properties>
+      <!-- Add your property definitions here -->
+		<!-- BOX 1 -->
+      <Property Name="FaderA1" Type="Real32" SupportRTPCType="Exclusive" DisplayName="Fader a-1">
+        <UserInterface Step="0.01" Fine="0.001" Decimals="3" UIMax="1.0" />
+        <DefaultValue>1.0</DefaultValue>
+        <AudioEnginePropertyID>1</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>0.0</Min>
+              <Max>1.0</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+      </Property>
+	    <Property Name="FaderA2" Type="Real32" SupportRTPCType="Exclusive" DisplayName="Fader a-2">
+			<UserInterface Step="0.01" Fine="0.001" Decimals="3" UIMax="1.0" />
+			<DefaultValue>0.0</DefaultValue>
+			<AudioEnginePropertyID>2</AudioEnginePropertyID>
+			<Restrictions>
+				<ValueRestriction>
+					<Range Type="Real32">
+						<Min>0.0</Min>
+						<Max>1.0</Max>
+					</Range>
+				</ValueRestriction>
+			</Restrictions>
+		</Property>
+		<Property Name="FaderA3" Type="Real32" SupportRTPCType="Exclusive" DisplayName="Fader a-3">
+			<UserInterface Step="0.01" Fine="0.001" Decimals="3" UIMax="1.0" />
+			<DefaultValue>0.0</DefaultValue>
+			<AudioEnginePropertyID>3</AudioEnginePropertyID>
+			<Restrictions>
+				<ValueRestriction>
+					<Range Type="Real32">
+						<Min>-1.0</Min>
+						<Max>1.0</Max>
+					</Range>
+				</ValueRestriction>
+			</Restrictions>
+		</Property>
+		<Property Name="FaderA4" Type="Real32" SupportRTPCType="Exclusive" DisplayName="Fader a-4">
+			<UserInterface Step="0.01" Fine="0.001" Decimals="3" UIMax="1" />
+			<DefaultValue>0.0</DefaultValue>
+			<AudioEnginePropertyID>4</AudioEnginePropertyID>
+			<Restrictions>
+				<ValueRestriction>
+					<Range Type="Real32">
+						<Min>0.0</Min>
+						<Max>1.0</Max>
+					</Range>
+				</ValueRestriction>
+			</Restrictions>
+		</Property>
+		<Property Name="FaderA5" Type="Real32" SupportRTPCType="Exclusive" DisplayName="Fader a-5">
+			<UserInterface Step="0.01" Fine="0.001" Decimals="3" UIMax="1" />
+			<DefaultValue>0.0</DefaultValue>
+			<AudioEnginePropertyID>5</AudioEnginePropertyID>
+			<Restrictions>
+				<ValueRestriction>
+					<Range Type="Real32">
+						<Min>-1.0</Min>
+						<Max>1.0</Max>
+					</Range>
+				</ValueRestriction>
+			</Restrictions>
+		</Property>
+		<Property Name="CheckBox1" Type="bool" DisplayName="CheckBox1">
+			<DefaultValue>false</DefaultValue>
+			<AudioEnginePropertyID>6</AudioEnginePropertyID>
+		</Property>
+		<Property Name="CheckBox2" Type="bool" DisplayName="CheckBox2">
+			<DefaultValue>false</DefaultValue>
+			<AudioEnginePropertyID>7</AudioEnginePropertyID>
+		</Property>
+		<Property Name="Combo1" Type="int32" DisplayName="Combo1">
+			<DefaultValue>0</DefaultValue>
+			<AudioEnginePropertyID>8</AudioEnginePropertyID>
+			<Restrictions>
+				<ValueRestriction>
+					<Enumeration Type="int32">
+						<Value DisplayName="0">0</Value>
+						<Value DisplayName="1">1</Value>
+						<Value DisplayName="2">2</Value>
+						<Value DisplayName="3">3</Value>
+						<Value DisplayName="4">4</Value>
+					</Enumeration>
+				</ValueRestriction>
+			</Restrictions>
+		</Property>
+		<Property Name="LabelA1" Type="string" DisplayName="LabelA1">
+			<DefaultValue>LabelA1</DefaultValue>
+		</Property>
+		<Property Name="LabelA2" Type="string" DisplayName="LabelA2">
+			<DefaultValue>LabelA2</DefaultValue>
+		</Property>
+		<Property Name="LabelA3" Type="string" DisplayName="LabelA3">
+			<DefaultValue>LabelA3</DefaultValue>
+		</Property>
+		<Property Name="LabelA4" Type="string" DisplayName="LabelA4">
+			<DefaultValue>LabelA4</DefaultValue>
+		</Property>
+		<Property Name="LabelA5" Type="string" DisplayName="LabelA5">
+			<DefaultValue>LabelA5</DefaultValue>
+		</Property>
+		<Property Name="LabelA6" Type="string" DisplayName="LabelA6">
+			<DefaultValue>LabelA6</DefaultValue>
+		</Property>
+
+		<!-- BOX 2 PROPERTIES -->
+		
+		<Property Name="FaderB1" Type="Real32" SupportRTPCType="Exclusive" DisplayName="Fader b-1">
+			<UserInterface Step="0.01" Fine="0.001" Decimals="3" UIMax="1.0" />
+			<DefaultValue>1.0</DefaultValue>
+			<AudioEnginePropertyID>9</AudioEnginePropertyID>
+			<Restrictions>
+				<ValueRestriction>
+					<Range Type="Real32">
+						<Min>0.0</Min>
+						<Max>1.0</Max>
+					</Range>
+				</ValueRestriction>
+			</Restrictions>
+		</Property>
+		<Property Name="FaderB2" Type="Real32" SupportRTPCType="Exclusive" DisplayName="Fader b-2">
+			<UserInterface Step="0.01" Fine="0.001" Decimals="3" UIMax="1.0" />
+			<DefaultValue>0.0</DefaultValue>
+			<AudioEnginePropertyID>10</AudioEnginePropertyID>
+			<Restrictions>
+				<ValueRestriction>
+					<Range Type="Real32">
+						<Min>0.0</Min>
+						<Max>1.0</Max>
+					</Range>
+				</ValueRestriction>
+			</Restrictions>
+		</Property>
+		<Property Name="FaderB3" Type="Real32" SupportRTPCType="Exclusive" DisplayName="Fader b-3">
+			<UserInterface Step="0.01" Fine="0.001" Decimals="3" UIMax="1.0" />
+			<DefaultValue>0.0</DefaultValue>
+			<AudioEnginePropertyID>11</AudioEnginePropertyID>
+			<Restrictions>
+				<ValueRestriction>
+					<Range Type="Real32">
+						<Min>-1.0</Min>
+						<Max>1.0</Max>
+					</Range>
+				</ValueRestriction>
+			</Restrictions>
+		</Property>
+		<Property Name="FaderB4" Type="Real32" SupportRTPCType="Exclusive" DisplayName="Fader b-4">
+			<UserInterface Step="0.01" Fine="0.001" Decimals="3" UIMax="1.0" />
+			<DefaultValue>0.0</DefaultValue>
+			<AudioEnginePropertyID>12</AudioEnginePropertyID>
+			<Restrictions>
+				<ValueRestriction>
+					<Range Type="Real32">
+						<Min>0.0</Min>
+						<Max>1.0</Max>
+					</Range>
+				</ValueRestriction>
+			</Restrictions>
+		</Property>
+		<Property Name="FaderB5" Type="Real32" SupportRTPCType="Exclusive" DisplayName="Fader b-5">
+			<UserInterface Step="0.01" Fine="0.001" Decimals="3" UIMax="1.0" />
+			<DefaultValue>0.0</DefaultValue>
+			<AudioEnginePropertyID>13</AudioEnginePropertyID>
+			<Restrictions>
+				<ValueRestriction>
+					<Range Type="Real32">
+						<Min>-1.0</Min>
+						<Max>1.0</Max>
+					</Range>
+				</ValueRestriction>
+			</Restrictions>
+		</Property>
+		<Property Name="CheckBox3" Type="bool" DisplayName="CheckBox3">
+			<DefaultValue>false</DefaultValue>
+			<AudioEnginePropertyID>14</AudioEnginePropertyID>
+		</Property>
+		<Property Name="CheckBox4" Type="bool" DisplayName="CheckBox4">
+			<DefaultValue>false</DefaultValue>
+			<AudioEnginePropertyID>15</AudioEnginePropertyID>
+		</Property>
+		<Property Name="Combo2" Type="int32" DisplayName="Combo2">
+			<DefaultValue>0</DefaultValue>
+			<AudioEnginePropertyID>16</AudioEnginePropertyID>
+			<Restrictions>
+				<ValueRestriction>
+					<Enumeration Type="int32">
+						<Value DisplayName="0">0</Value>
+						<Value DisplayName="1">1</Value>
+						<Value DisplayName="2">2</Value>
+						<Value DisplayName="3">3</Value>
+						<Value DisplayName="4">4</Value>
+						<Value DisplayName="5">5</Value>
+						<Value DisplayName="6">6</Value>
+						<Value DisplayName="7">7</Value>
+						<Value DisplayName="8">8</Value>
+						<Value DisplayName="9">9</Value>
+					</Enumeration>
+				</ValueRestriction>
+			</Restrictions>
+		</Property>
+		<Property Name="LabelB1" Type="string" DisplayName="LabelB1">
+			<DefaultValue>LabelB1</DefaultValue>
+		</Property>
+		<Property Name="LabelB2" Type="string" DisplayName="LabelB2">
+			<DefaultValue>LabelB2</DefaultValue>
+		</Property>
+		<Property Name="LabelB3" Type="string" DisplayName="LabelB3">
+			<DefaultValue>LabelB3</DefaultValue>
+		</Property>
+		<Property Name="LabelB4" Type="string" DisplayName="LabelB4">
+			<DefaultValue>LabelB4</DefaultValue>
+		</Property>
+		<Property Name="LabelB5" Type="string" DisplayName="LabelB5">
+			<DefaultValue>LabelB5</DefaultValue>
+		</Property>
+		<Property Name="LabelB6" Type="string" DisplayName="LabelB6">
+			<DefaultValue>LabelB6</DefaultValue>
+		</Property>
+		
+		<!-- BOX 3 PROPERTIES -->
+
+		<Property Name="FaderC1" Type="Real32" SupportRTPCType="Exclusive" DisplayName="Fader c-1">
+			<UserInterface Step="0.01" Fine="0.001" Decimals="3" UIMax="1.0" />
+			<DefaultValue>1.0</DefaultValue>
+			<AudioEnginePropertyID>17</AudioEnginePropertyID>
+			<Restrictions>
+				<ValueRestriction>
+					<Range Type="Real32">
+						<Min>0.0</Min>
+						<Max>1.0</Max>
+					</Range>
+				</ValueRestriction>
+			</Restrictions>
+		</Property>
+		<Property Name="FaderC2" Type="Real32" SupportRTPCType="Exclusive" DisplayName="Fader c-2">
+			<UserInterface Step="0.01" Fine="0.001" Decimals="3" UIMax="1.0" />
+			<DefaultValue>0.0</DefaultValue>
+			<AudioEnginePropertyID>18</AudioEnginePropertyID>
+			<Restrictions>
+				<ValueRestriction>
+					<Range Type="Real32">
+						<Min>0.0</Min>
+						<Max>1.0</Max>
+					</Range>
+				</ValueRestriction>
+			</Restrictions>
+		</Property>
+		<Property Name="FaderC3" Type="Real32" SupportRTPCType="Exclusive" DisplayName="Fader c-3">
+			<UserInterface Step="0.01" Fine="0.001" Decimals="3" UIMax="1.0" />
+			<DefaultValue>0.0</DefaultValue>
+			<AudioEnginePropertyID>19</AudioEnginePropertyID>
+			<Restrictions>
+				<ValueRestriction>
+					<Range Type="Real32">
+						<Min>-1.0</Min>
+						<Max>1.0</Max>
+					</Range>
+				</ValueRestriction>
+			</Restrictions>
+		</Property>
+		<Property Name="FaderC4" Type="Real32" SupportRTPCType="Exclusive" DisplayName="Fader c-4">
+			<UserInterface Step="0.01" Fine="0.001" Decimals="3" UIMax="1.0" />
+			<DefaultValue>0.0</DefaultValue>
+			<AudioEnginePropertyID>20</AudioEnginePropertyID>
+			<Restrictions>
+				<ValueRestriction>
+					<Range Type="Real32">
+						<Min>0.0</Min>
+						<Max>1.0</Max>
+					</Range>
+				</ValueRestriction>
+			</Restrictions>
+		</Property>
+		<Property Name="FaderC5" Type="Real32" SupportRTPCType="Exclusive" DisplayName="Fader c-5">
+			<UserInterface Step="0.01" Fine="0.001" Decimals="3" UIMax="1.0" />
+			<DefaultValue>0.0</DefaultValue>
+			<AudioEnginePropertyID>21</AudioEnginePropertyID>
+			<Restrictions>
+				<ValueRestriction>
+					<Range Type="Real32">
+						<Min>-1.0</Min>
+						<Max>1.0</Max>
+					</Range>
+				</ValueRestriction>
+			</Restrictions>
+		</Property>
+		<Property Name="CheckBox5" Type="bool" DisplayName="CheckBox5">
+			<DefaultValue>false</DefaultValue>
+			<AudioEnginePropertyID>22</AudioEnginePropertyID>
+		</Property>
+		<Property Name="CheckBox6" Type="bool" DisplayName="CheckBox6">
+			<DefaultValue>false</DefaultValue>
+			<AudioEnginePropertyID>23</AudioEnginePropertyID>
+		</Property>
+		<Property Name="Combo3" Type="int32" DisplayName="Combo3">
+			<DefaultValue>0</DefaultValue>
+			<AudioEnginePropertyID>24</AudioEnginePropertyID>
+			<Restrictions>
+				<ValueRestriction>
+					<Enumeration Type="int32">
+						<Value DisplayName="0">0</Value>
+						<Value DisplayName="1">1</Value>
+						<Value DisplayName="2">2</Value>
+						<Value DisplayName="3">3</Value>
+						<Value DisplayName="4">4</Value>
+						<Value DisplayName="5">5</Value>
+						<Value DisplayName="6">6</Value>
+						<Value DisplayName="7">7</Value>
+						<Value DisplayName="8">8</Value>
+						<Value DisplayName="9">9</Value>
+						<Value DisplayName="10">10</Value>
+						<Value DisplayName="11">11</Value>
+						<Value DisplayName="12">12</Value>
+						<Value DisplayName="13">13</Value>
+						<Value DisplayName="14">14</Value>
+					</Enumeration>
+				</ValueRestriction>
+			</Restrictions>
+		</Property>
+		<Property Name="LabelC1" Type="string" DisplayName="LabelC1">
+			<DefaultValue>LabelC1</DefaultValue>
+		</Property>
+		<Property Name="LabelC2" Type="string" DisplayName="LabelC2">
+			<DefaultValue>LabelC2</DefaultValue>
+		</Property>
+		<Property Name="LabelC3" Type="string" DisplayName="LabelC3">
+			<DefaultValue>LabelC3</DefaultValue>
+		</Property>
+		<Property Name="LabelC4" Type="string" DisplayName="LabelC4">
+			<DefaultValue>LabelC4</DefaultValue>
+		</Property>
+		<Property Name="LabelC5" Type="string" DisplayName="LabelC5">
+			<DefaultValue>LabelC5</DefaultValue>
+		</Property>
+		<Property Name="LabelC6" Type="string" DisplayName="LabelC6">
+			<DefaultValue>LabelC6</DefaultValue>
+		</Property>
+
+		<!-- BOX 4 PROPERTIES -->
+
+		<Property Name="FaderD1" Type="Real32" SupportRTPCType="Exclusive" DisplayName="Fader d-1">
+			<UserInterface Step="0.01" Fine="0.001" Decimals="3" UIMax="1.0" />
+			<DefaultValue>1.0</DefaultValue>
+			<AudioEnginePropertyID>25</AudioEnginePropertyID>
+			<Restrictions>
+				<ValueRestriction>
+					<Range Type="Real32">
+						<Min>0.0</Min>
+						<Max>1.0</Max>
+					</Range>
+				</ValueRestriction>
+			</Restrictions>
+		</Property>
+		<Property Name="FaderD2" Type="Real32" SupportRTPCType="Exclusive" DisplayName="Fader d-2">
+			<UserInterface Step="0.01" Fine="0.001" Decimals="3" UIMax="1" />
+			<DefaultValue>0.0</DefaultValue>
+			<AudioEnginePropertyID>26</AudioEnginePropertyID>
+			<Restrictions>
+				<ValueRestriction>
+					<Range Type="Real32">
+						<Min>0.0</Min>
+						<Max>1</Max>
+					</Range>
+				</ValueRestriction>
+			</Restrictions>
+		</Property>
+		<Property Name="FaderD3" Type="Real32" SupportRTPCType="Exclusive" DisplayName="Fader d-3">
+			<UserInterface Step="0.01" Fine="0.001" Decimals="3" UIMax="1" />
+			<DefaultValue>0.0</DefaultValue>
+			<AudioEnginePropertyID>27</AudioEnginePropertyID>
+			<Restrictions>
+				<ValueRestriction>
+					<Range Type="Real32">
+						<Min>-1.0</Min>
+						<Max>1</Max>
+					</Range>
+				</ValueRestriction>
+			</Restrictions>
+		</Property>
+		<Property Name="FaderD4" Type="Real32" SupportRTPCType="Exclusive" DisplayName="Fader d-4">
+			<UserInterface Step="0.01" Fine="0.001" Decimals="3" UIMax="1" />
+			<DefaultValue>0.0</DefaultValue>
+			<AudioEnginePropertyID>28</AudioEnginePropertyID>
+			<Restrictions>
+				<ValueRestriction>
+					<Range Type="Real32">
+						<Min>0.0</Min>
+						<Max>1</Max>
+					</Range>
+				</ValueRestriction>
+			</Restrictions>
+		</Property>
+		<Property Name="FaderD5" Type="Real32" SupportRTPCType="Exclusive" DisplayName="Fader d-5">
+			<UserInterface Step="0.01" Fine="0.001" Decimals="3" UIMax="1" />
+			<DefaultValue>0.0</DefaultValue>
+			<AudioEnginePropertyID>29</AudioEnginePropertyID>
+			<Restrictions>
+				<ValueRestriction>
+					<Range Type="Real32">
+						<Min>-1.0</Min>
+						<Max>1</Max>
+					</Range>
+				</ValueRestriction>
+			</Restrictions>
+		</Property>
+		<Property Name="CheckBox7" Type="bool" DisplayName="CheckBox7">
+			<DefaultValue>false</DefaultValue>
+			<AudioEnginePropertyID>30</AudioEnginePropertyID>
+		</Property>
+		<Property Name="CheckBox8" Type="bool" DisplayName="CheckBox8">
+			<DefaultValue>false</DefaultValue>
+			<AudioEnginePropertyID>31</AudioEnginePropertyID>
+		</Property>
+		<Property Name="Combo4" Type="int32" DisplayName="Combo4">
+			<DefaultValue>0</DefaultValue>
+			<AudioEnginePropertyID>32</AudioEnginePropertyID>
+			<Restrictions>
+				<ValueRestriction>
+					<Enumeration Type="int32">
+						<Value DisplayName="0">0</Value>
+						<Value DisplayName="1">1</Value>
+						<Value DisplayName="2">2</Value>
+						<Value DisplayName="3">3</Value>
+						<Value DisplayName="4">4</Value>
+						<Value DisplayName="5">5</Value>
+						<Value DisplayName="6">6</Value>
+						<Value DisplayName="7">7</Value>
+						<Value DisplayName="8">8</Value>
+						<Value DisplayName="9">9</Value>
+						<Value DisplayName="10">10</Value>
+						<Value DisplayName="11">11</Value>
+						<Value DisplayName="12">12</Value>
+						<Value DisplayName="13">13</Value>
+						<Value DisplayName="14">14</Value>
+						<Value DisplayName="15">15</Value>
+						<Value DisplayName="16">16</Value>
+						<Value DisplayName="17">17</Value>
+						<Value DisplayName="18">18</Value>
+						<Value DisplayName="19">19</Value>
+					</Enumeration>
+				</ValueRestriction>
+			</Restrictions>
+		</Property>
+		<Property Name="LabelD1" Type="string" DisplayName="LabelD1">
+			<DefaultValue>LabelD1</DefaultValue>
+		</Property>
+		<Property Name="LabelD2" Type="string" DisplayName="LabelD2">
+			<DefaultValue>LabelD2</DefaultValue>
+		</Property>
+		<Property Name="LabelD3" Type="string" DisplayName="LabelD3">
+			<DefaultValue>LabelD3</DefaultValue>
+		</Property>
+		<Property Name="LabelD4" Type="string" DisplayName="LabelD4">
+			<DefaultValue>LabelD4</DefaultValue>
+		</Property>
+		<Property Name="LabelD5" Type="string" DisplayName="LabelD5">
+			<DefaultValue>LabelD5</DefaultValue>
+		</Property>
+		<Property Name="LabelD6" Type="string" DisplayName="LabelD6">
+			<DefaultValue>LabelD6</DefaultValue>
+		</Property>
+		
+		
+		
+    </Properties>
+  </SourcePlugin>
+</PluginModule>
