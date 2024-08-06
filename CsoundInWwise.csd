@@ -8,8 +8,9 @@ sr = 44100
 ksmps = 512
 nchnls = 2
 0dbfs = 1
-
-//box 1 channels
+/*
+ //Possible channels to use: 
+ //box 1 channels
 chn_k "FaderA1", 3   // accepts values from 0 to 1
 chn_k "FaderA2", 3	// accepts values from 0 to 1
 chn_k "FaderA3", 3	// accepts values from -1 to 1
@@ -18,7 +19,7 @@ chn_k "FaderA5", 3   // accepts values from -1 to 1
 chn_k "CheckBox1", 3  // true/false values (1,0)
 chn_k "CheckBox2", 3	 // true/false values (1,0)
 chn_k "ComboBox1", 3	// int values from 0 to 4
-//box 2 channels
+ //box 2 channels
 chn_k "FaderB1", 3   // accepts values from 0 to 1
 chn_k "FaderB2", 3	// accepts values from 0 to 1
 chn_k "FaderB3", 3	// accepts values from -1 to 1
@@ -27,7 +28,7 @@ chn_k "FaderB5", 3   // accepts values from -1 to 1
 chn_k "CheckBox3", 3  // true/false values (1,0)
 chn_k "CheckBox4", 3	 // true/false values (1,0)
 chn_k "ComboBox2", 3	// int values from 0 to 9
-//box 3 channels
+ //box 3 channels
 chn_k "FaderC1", 3   // accepts values from 0 to 1
 chn_k "FaderC2", 3	// accepts values from 0 to 1
 chn_k "FaderC3", 3	// accepts values from -1 to 1
@@ -36,7 +37,7 @@ chn_k "FaderC5", 3   // accepts values from -1 to 1
 chn_k "CheckBox5", 3  // true/false values (1,0)
 chn_k "CheckBox6", 3	 // true/false values (1,0)
 chn_k "ComboBox3", 3	// int values from 0 to 14
-//box 4 channels
+ //box 4 channels
 chn_k "FaderD1", 3   // accepts values from 0 to 1
 chn_k "FaderD2", 3	// accepts values from 0 to 1
 chn_k "FaderD3", 3	// accepts values from -1 to 1
@@ -45,6 +46,7 @@ chn_k "FaderD5", 3   // accepts values from -1 to 1
 chn_k "CheckBox7", 3  // true/false values (1,0)
 chn_k "CheckBox8", 3	 // true/false values (1,0)
 chn_k "ComboBox4", 3	// int values from 0 to 19
+*/
 
 gisine   ftgen 10, 0, 16384, 10, 1	;sine wave
 giSawtooth ftgen 11,0, 2048, 10, 1, 0.5, 0.3, 0.25, 0.2 
@@ -55,6 +57,7 @@ gisquare ftgen 13, 0, 16384, 10, 1, 0 , .33, 0, .2 , 0, .14, 0 , .11, 0, .09 ;od
 giPulse   ftgen 14, 0, 128, 10, 1, 1, 1, 0.7, 0.5, 0.3, 0.1  
 
 instr 1
+//just using a few of them
 kamp chnget "FaderA1"
 kfreq chnget "FaderA2"
 kdistortEnable chnget "CheckBox1"
